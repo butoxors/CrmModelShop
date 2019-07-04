@@ -15,22 +15,19 @@ namespace CrmUI
     {
         public Customer Customer { get; set; }
 
-
         public CustomerForm()
         {
             InitializeComponent();
         }
-
-        private void CustomerForm_Load(object sender, EventArgs e)
+        public CustomerForm(Customer customer) : this()
         {
+            this.Customer = customer;
+            textBox1.Text = customer.Name;
         }
-
         private void addBtn_Click(object sender, EventArgs e)
         {
-            Customer = new Customer()
-            {
-                Name = textBox1.Text
-            };
+            Customer = Customer ?? new Customer();
+            Customer.Name = textBox1.Text;
             Close();
         }
     }

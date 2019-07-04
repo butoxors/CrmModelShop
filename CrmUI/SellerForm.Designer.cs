@@ -74,7 +74,6 @@
             this.Controls.Add(this.label1);
             this.Name = "SellerForm";
             this.Text = "SellerForm";
-            this.Load += new System.EventHandler(this.CustomerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
