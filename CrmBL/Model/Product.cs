@@ -14,5 +14,16 @@ namespace CrmBL.Model
         public virtual ICollection<Sell> Sells { get; set; }
 
         public override string ToString() => Name;
+
+        public override int GetHashCode() => ProductId;
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Product product)
+            {
+                return ProductId.Equals(product.ProductId);
+            }
+            return false;
+        }
     }
 }
