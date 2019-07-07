@@ -17,9 +17,9 @@ namespace CrmUI
             textBox1.Text = product.Name;
             numericUpDown1.Value = product.Price;
             numericUpDown2.Value = product.Count;
-            this.Product = product;
+            this.Product = product ?? new Product();
         }
-        private void addBtn_Click(object sender, EventArgs e)
+        private void AddBtn_Click(object sender, EventArgs e)
         {
             Product = Product ?? new Product();
             Product.Name = textBox1.Text;

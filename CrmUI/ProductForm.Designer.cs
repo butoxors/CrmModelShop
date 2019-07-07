@@ -67,7 +67,7 @@
             this.addBtn.TabIndex = 2;
             this.addBtn.Text = "Добавить";
             this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.addBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // numericUpDown1
             // 
